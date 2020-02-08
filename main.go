@@ -35,7 +35,7 @@ func main() {
 	// Wait for them to be all done
 	for {
 		total += <-done
-		if total >= concurrency {
+		if total >= concurrency - 1 {
 			return
 		}
 	}
